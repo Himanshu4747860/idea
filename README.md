@@ -20,5 +20,3 @@ This is an internal demo system for passively scanning predefined websites and c
 ## Security Note
 This is a passive trust signal collector, not a vulnerability scanner. All checks are non-intrusive.
 =======
-# idea
->>>>>>> 9c3b35dae3267a4d1c9394d42838c0a0ac6edde2
