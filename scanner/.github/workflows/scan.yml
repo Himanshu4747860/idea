@@ -1,0 +1,31 @@
+name: Demo Website Scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scanner
+        run: python scanner/run_scan.py
+
+      - name: Commit DB
+        run: |
+          git config --global user.name "github-action"
+          git config --global user.email "action@github.com"
+          git add data/
+          git commit -m "Update scan data" || echo "No changes"
+          git push
