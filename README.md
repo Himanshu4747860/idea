@@ -1,3 +1,4 @@
+
 # Website Trust Parameter Scanner (MVP v1)
 
 This is an internal demo system for passively scanning predefined websites and collecting trust parameters. It stores results in SQLite and runs via GitHub Actions.
@@ -18,3 +19,6 @@ This is an internal demo system for passively scanning predefined websites and c
 
 ## Security Note
 This is a passive trust signal collector, not a vulnerability scanner. All checks are non-intrusive.
+=======
+# idea
+>>>>>>> 9c3b35dae3267a4d1c9394d42838c0a0ac6edde2
